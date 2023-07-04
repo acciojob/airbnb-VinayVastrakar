@@ -22,13 +22,13 @@ import java.util.UUID;
 @RequestMapping("/hotel")
 public class HotelManagementController {
 
-    @Autowired
+
     HotelManangmentService serv = new HotelManangmentService();
 
     @PostMapping("/add-hotel")
     public String addHotel(@RequestBody Hotel hotel){
 
-        //You need to add an hotel to the database
+        //You need to add a hotel to the database
         //incase the hotelName is null or the hotel Object is null return an empty a FAILURE
         //Incase somebody is trying to add the duplicate hotelName return FAILURE
         //in all other cases return SUCCESS after successfully adding the hotel to the hotelDb.
@@ -61,7 +61,7 @@ public class HotelManagementController {
         //Have bookingId as a random UUID generated String
         //save the booking Entity and keep the bookingId as a primary key
         //Calculate the total amount paid by the person based on no. of rooms booked and price of the room per night.
-        //If there arent enough rooms available in the hotel that we are trying to book return -1 
+        //If there aren't enough rooms available in the hotel that we are trying to book return -1
         //in other case return total amount paid 
         
         return serv.bookARoom(booking);
