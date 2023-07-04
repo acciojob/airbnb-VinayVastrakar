@@ -25,7 +25,6 @@ public class Hotel {
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
     }
-
     public int getAvailableRooms() {
         return availableRooms;
     }
